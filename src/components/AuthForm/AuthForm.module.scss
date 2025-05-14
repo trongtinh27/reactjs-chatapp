@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  justify-self: end;
+  align-items: center;
+  height: auto;
+  margin-bottom: 15px;
+  position: absolute;
+  bottom: 0;
+
+  .link {
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 5px;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

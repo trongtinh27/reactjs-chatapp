@@ -1,0 +1,69 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #1f1f1f;
+  border-radius: 10px;
+
+  .header {
+    width: 100%;
+    background-color: #1f1f1f;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+
+  .main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+
+    .chat-area {
+      flex: 1;
+      overflow-y: auto;
+      padding: 8px;
+      display: flex;
+      flex-direction: column;
+      overflow-anchor: none; // Ngăn chặn scroll jump khi có tin nhắn mới
+
+      // Thiết lập scroll
+      scrollbar-width: auto;
+      scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
+
+      // WebKit browsers
+      &::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+      }
+
+      &:hover::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 255, 255, 0.3);
+      }
+
+      &::-webkit-scrollbar-thumb:window-inactive {
+        background: transparent;
+      }
+    }
+
+    .chat {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      /* Quan trọng: Thêm margin-top tự động */
+      margin-top: auto;
+      /* Đảm bảo container mở rộng */
+      min-height: min-content;
+    }
+  }
+}

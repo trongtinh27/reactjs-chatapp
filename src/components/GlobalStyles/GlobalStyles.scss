@@ -1,0 +1,47 @@
+:root {
+  --font: Segoe UI, Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Segoe UI, Helvetica, Arial, sans-serif;
+  background: #fff;
+  background-color: #2e2e2e;
+  overflow-y: visible;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior-y: none;
+  height: 97vh;
+  overflow: hidden;
+}
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+.tippy-box {
+  font-family: var(--font);
+  background-color: #f7f8fa;
+  color: #1c1e21;
+  font-size: 12px;
+  padding: 3px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease;
+}
+
+.tippy-arrow {
+  color: #f7f8fa;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  height: 1em;
+  width: 1em;
+  right: 20px;
+  background: url(https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg)
+    no-repeat 50% 50%;
+  cursor: pointer;
+}

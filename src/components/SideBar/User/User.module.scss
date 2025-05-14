@@ -1,0 +1,136 @@
+.container {
+  display: flex;
+  height: 44px;
+  width: 44px;
+  padding-bottom: 5px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  .wrapper {
+    width: 32px;
+    height: 32px;
+
+    .avatar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: #3e4042;
+      overflow: hidden;
+
+      &:hover .avatar-img {
+        filter: brightness(1.2); // 👈 Làm ảnh sáng hơn
+        transition: filter 0.3s ease;
+      }
+
+      .avatar-img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.setting-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  max-width: 380px;
+  max-height: 650px;
+  background-color: #2e2e2e;
+  border-radius: 8px;
+  position: relative;
+  border: 1px solid #3e4042;
+
+  .setting-arrow {
+    top: calc(100% - 1px);
+    left: 0;
+    position: absolute;
+    fill: #3e4042;
+  }
+
+  .setting-wrapper {
+    max-height: 624px;
+    max-width: calc(100vw - 2 * 8px);
+    width: calc(100vw - 2 * 8px);
+    padding: 2px;
+    scrollbar-width: none;
+    z-index: 0;
+    user-select: none;
+
+    .item {
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.12);
+      }
+
+      .item-wrapper {
+        display: flex;
+        padding: 8px;
+        margin: 0 4px;
+
+        .icon {
+          display: flex;
+          width: 28px;
+          height: 28px;
+          border-radius: 50%;
+          background-color: rgba(255, 255, 255, 0.18);
+          margin-right: 12px;
+          align-self: baseline;
+          justify-content: center;
+          align-items: center;
+
+          svg {
+            display: block;
+            fill: #e4e6eb;
+            transition-property: color, fill, stroke;
+          }
+        }
+
+        .text {
+          min-width: 0;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-direction: row;
+          margin: 5px 0;
+          flex-shrink: 1;
+          position: relative;
+
+          span {
+            overflow-y: visible;
+            max-width: 100%;
+            min-width: 0;
+            font-weight: 500;
+            text-align: start;
+            word-wrap: break-word;
+            position: relative;
+            display: flex;
+            font-size: 0.875rem;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+
+    .line-break {
+      background: #dadde1;
+      border-width: 0;
+      color: #dadde1;
+      height: 1px;
+      margin: 8px 16px;
+      background-color: #3e4042;
+    }
+  }
+}

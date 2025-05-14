@@ -1,0 +1,41 @@
+.container {
+  margin-top: 16px;
+  //   margin-bottom: -66px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0 16px;
+  width: 44px;
+  height: 97vh;
+
+  .wrapper {
+    max-width: 100%;
+    flex-direction: column;
+    box-sizing: border-box;
+    z-index: 0;
+    height: 100%;
+
+    .line-wrapper {
+      padding: 16px 6px 8px 6px;
+      min-width: 0;
+      min-height: 0;
+
+      .line {
+        width: 100%;
+        min-width: 0;
+        min-height: 0;
+        margin-top: 8px;
+        border: solid 1px #3e4042;
+      }
+    }
+
+    .profile-wrapper {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      bottom: 0;
+      height: auto;
+      width: 44px;
+    }
+  }
+}
